@@ -50,10 +50,10 @@ class TestFloats(unittest.TestCase):
             self.assertAlmostEqual(token.value, value)
             self.assertEqual(token.type, 'FLOAT')
 
-    # def test_wrong_floats_1(self):
-    #     self.lexer.input('1_.5')
-    #     self.lexer.token()  # consumes "1"
-    #     self.assertRaises(lex.LexError, self.lexer.token)
+    def test_wrong_floats_1(self):
+        self.lexer.input('1_.5')
+        self.lexer.token()  # consumes "1"
+        self.assertRaises(lex.LexError, self.lexer.token)
 
     # def test_wrong_floats_2(self):
     #     self.lexer.input('1._5')
