@@ -9,7 +9,7 @@ def getLexer():
     return lexer
 
 def t_FLOAT(t):
-    r'([0-9]*\.[0-9]*|[0-9])([eE]?[\+-]?[0-9]*)?'
+    r'([0-9_]*\.[0-9]*|[0-9]+)([eE]?[\+-]?[0-9_]*)?'
     
     t.value = float(t.value)
     return t
