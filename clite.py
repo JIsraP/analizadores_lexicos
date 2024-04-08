@@ -9,7 +9,7 @@ def getLexer():
     return lexer
 
 def t_STR(t):
-    r'[aA-zZ]+(\s[aA-zZ]+)*'
+    r'.\"*[aA-zZ]+(\s.+)*.\"*'
     t.value = str(t.value)
     return t
 
